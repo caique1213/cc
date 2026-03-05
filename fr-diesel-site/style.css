@@ -1,0 +1,698 @@
+/* RESET E CONFIGURAÇÕES GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TIPOGRAFIA */
+.section-tag {
+    display: inline-block;
+    color: #e11d1d;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-left: 3px solid #e11d1d;
+    padding-left: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-title span {
+    color: #e11d1d;
+}
+
+.section-subtitle {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo-fr {
+    color: #e11d1d;
+    background: #1a1a1a;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.logo-diesel {
+    color: #ffffff;
+    background: #222;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+/* NAVEGAÇÃO */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: #e11d1d;
+}
+
+.btn-whatsapp-nav {
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-whatsapp-nav:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1625047509168-a702ecfced6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.hero-title span {
+    color: #e11d1d;
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* DIAGNÓSTICO RÁPIDO */
+.diagnostico-rapido {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.diagnostico-label {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #e11d1d;
+}
+
+.diagnostico-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-diagnostico {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-diagnostico:hover {
+    background: #e11d1d;
+    border-color: #e11d1d;
+    transform: translateY(-2px);
+}
+
+.hero-botoes-principais {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primario {
+    background: #e11d1d;
+    color: white;
+}
+
+.btn-primario:hover {
+    background: #b00f0f;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background: transparent;
+    color: white;
+    border: 2px solid #e11d1d;
+}
+
+.btn-secundario:hover {
+    background: #e11d1d;
+    transform: translateY(-2px);
+}
+
+.hero-selos {
+    display: flex;
+    gap: 30px;
+}
+
+.hero-selos span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.hero-selos i {
+    color: #e11d1d;
+}
+
+/* SOBRE */
+.sobre {
+    padding: 100px 0;
+    background: #0f0f0f;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-texto {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.sobre-diferenciais {
+    margin-top: 30px;
+}
+
+.diferencial-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.diferencial-item i {
+    color: #e11d1d;
+    font-size: 1.5rem;
+}
+
+.diferencial-item h4 {
+    margin-bottom: 5px;
+}
+
+.diferencial-item p {
+    color: #b0b0b0;
+}
+
+.img-placeholder {
+    background: #1a1a1a;
+    border-radius: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #333;
+}
+
+.img-placeholder i {
+    font-size: 4rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* SERVIÇOS */
+.servicos {
+    padding: 100px 0;
+    background: #0a0a0a;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.servico-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s;
+    border: 1px solid #333;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    border-color: #e11d1d;
+    box-shadow: 0 10px 30px rgba(225, 29, 29, 0.1);
+}
+
+.servico-icon {
+    width: 70px;
+    height: 70px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.servico-icon i {
+    font-size: 2rem;
+    color: #e11d1d;
+}
+
+.servico-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.servico-card p {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* MARCAS */
+.marcas {
+    padding: 100px 0;
+    background: #0f0f0f;
+}
+
+.marcas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+}
+
+.marca-item {
+    background: #1a1a1a;
+    padding: 30px 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #333;
+}
+
+.marca-item i {
+    font-size: 3rem;
+    color: #e11d1d;
+}
+
+.marca-item span {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.veiculos-atendidos {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid #333;
+}
+
+.veiculos-atendidos h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.marcas-veiculos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.marcas-veiculos span {
+    background: #1a1a1a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid #333;
+}
+
+/* GALERIA */
+.galeria {
+    padding: 100px 0;
+    background: #0a0a0a;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.galeria-item {
+    background: #1a1a1a;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.galeria-item i {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.galeria-item.placeholder:hover {
+    border-color: #e11d1d;
+}
+
+.galeria-obs {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* CONTATO */
+.contato {
+    padding: 100px 0;
+    background: #0f0f0f;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    color: #e11d1d;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.info-item h4 {
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #b0b0b0;
+}
+
+.btn-whatsapp-contato {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.mapa-placeholder {
+    background: #1a1a1a;
+    border-radius: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+}
+
+.mapa-placeholder i {
+    font-size: 4rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    z-index: 99;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-fixo:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+.footer {
+    background: #050505;
+    padding: 60px 0 20px;
+    border-top: 1px solid #222;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.logo-footer .logo-fr,
+.logo-footer .logo-diesel {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.footer-info p {
+    color: #b0b0b0;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contato h4 {
+    margin-bottom: 20px;
+    color: #e11d1d;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e11d1d;
+}
+
+.footer-contato p {
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.footer-contato i {
+    color: #e11d1d;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #666;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-botoes-principais {
+        flex-direction: column;
+    }
+
+    .hero-selos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-grid,
+    .contato-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marcas-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca-item {
+        width: 100%;
+    }
+
+    .diagnostico-botoes {
+        flex-direction: column;
+    }
+
+    .btn-diagnostico {
+        width: 100%;
+        justify-content: center;
+    }
+}
